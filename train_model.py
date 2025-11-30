@@ -61,10 +61,13 @@ model = train_model(X_train, y_train) # your code here
 # save the model and the encoder
 model_path = os.path.join(project_path, "model", "model.pkl")
 save_model(model, model_path)
+print("Model saved to model/model.pkl")
 encoder_path = os.path.join(project_path, "model", "encoder.pkl")
 save_model(encoder, encoder_path)
+print("Model saved to model/encoder.pkl")
 
 # load the model
+print("Loading model from model/model.pkl")
 model = load_model(
     model_path
 ) 
